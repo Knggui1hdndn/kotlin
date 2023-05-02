@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_create"
+    app:startDestination="@id/mainF">
+
+
+    <fragment
+        android:id="@+id/mainActivity"
+        android:name="com.example.kotlin.changeAcitivity.MainActivity"
+        android:label="activity_main3"
+        tools:layout="@layout/activity_main3" >
+        <action
+            android:id="@+id/action_mainActivity_to_mainF"
+            app:destination="@id/mainF" >
+
+        </action>
+        <action
+
+            app:enterAnim="@anim/stripe_3ds2_challenge_transition_slide_in"
+            app:exitAnim="@anim/stripe_3ds2_challenge_transition_slide_out"
+
+            android:id="@+id/action_mainActivity_to_mainActivity2"
+            app:destination="@id/mainActivity2" />
+        <argument
+            android:name="khang"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainActivity2"
+        android:name="com.example.kotlin.changeAcitivity.MainActivity2"
+        android:label="activity_main4"
+        tools:layout="@layout/activity_main4" >
+        <action
+            android:id="@+id/action_mainActivity2_to_mainF"
+            app:destination="@id/mainF" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainActivity3"
+        android:name="com.example.kotlin.changeAcitivity.MainActivity3"
+        android:label="activity_main5"
+        tools:layout="@layout/activity_main5" >
+        <action
+            android:id="@+id/action_mainActivity3_to_mainF"
+            app:destination="@id/mainF" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainF"
+        android:name="com.example.kotlin.changeAcitivity.MainF"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+
+             app:enterAnim="@anim/stripe_3ds2_challenge_transition_slide_in"
+            app:exitAnim="@anim/stripe_3ds2_challenge_transition_slide_out"
+            android:id="@+id/action_mainF_to_mainActivity"
+            app:destination="@id/mainActivity" >
+
+        </action>
+        <action
+            android:id="@+id/action_mainF_to_mainActivity2"
+            app:destination="@id/mainActivity2" />
+        <action
+            android:id="@+id/action_mainF_to_mainActivity3"
+            app:destination="@id/mainActivity3" />
+    </fragment>
+</navigation>
